@@ -5,6 +5,23 @@ next: /dynamic-links/usage/installation/ios
 previous: /dynamic-links/usage
 ---
 
+# Update AndroidManifest.xml
+
+Add code as below
+
+```groovy
+  <activity ..........>
+       <intent-filter>
+            <action android:name="android.intent.action.VIEW"/>
+            <category android:name="android.intent.category.DEFAULT"/>
+            <category android:name="android.intent.category.BROWSABLE"/>
+            <data android:host="example.page.link" android:scheme="http"/>
+            <data android:host="example.page.link" android:scheme="https"/>
+        </intent-filter>
+  </activity>
+```
+
+
 # Android Manual Installation
 
 The following steps are only required if your environment does not have access to React Native
